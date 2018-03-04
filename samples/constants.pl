@@ -24,3 +24,6 @@ if (TRUE) {
     say 'false';
 }
 
+
+{say 'true'} if X_C == 1;
+
