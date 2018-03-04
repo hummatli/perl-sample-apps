@@ -10,14 +10,16 @@ say ("one", "two", "three");
 say qw(one two three);
 
 
-my @array = (1, 2, 3);
+my @array = (1, 2, 3, 4);
 
 say foreach @array;
 
 
 say $array[1]; #retuns scalar
-#say @array[1]; #returns new array, this gives warning
+#say @array[1]; #returns new array, this gives warning, cause it slice only one element
 
+say $array[1]; #retuns scalar
+say foreach @array[1, 2, 3]; #returns new array, slice of it
 
 $array[1] = "new element";
 say foreach @array;
@@ -36,4 +38,11 @@ say foreach @array;
 
 my $count = @array;
 say "array elements count is $count";
+
+
+
+say @array[1, 2, 3]; #bu indexlerden yeni ayyay duzeldir
+say @array[1, 0, 2]; #bu indexlerden yeni ayyay duzeldir. Indexler qarishiq da ola biler
+say @array[1..5]; #bu indexlerden yeni ayyay duzeldir. Bu range operatoru iledir
+say $array[1]; #arrayin birinci elementin qaytarir
 
