@@ -25,5 +25,5 @@ if (TRUE) {
 }
 
 
-{say 'true'} if X_C == 1;
+say 'true' if X_C == 1;
 
